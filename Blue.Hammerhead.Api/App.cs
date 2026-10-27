@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace jet.piranha.Api
+namespace Blue.Hammerhead.Api
 {
-    public class Program
+    public class App
     {
         public static void Main(string[] args)
         {

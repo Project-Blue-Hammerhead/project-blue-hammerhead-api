@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="Blue.Hammerhead.Api/Blue.Hammerhead.Api.csproj" />
+  <Project Path="Blue.Hammerhead.Data/Blue.Hammerhead.Data.csproj" />
   <Project Path="Blue.Hammerhead.Domain/Blue.Hammerhead.Domain.csproj" />
 </Solution>

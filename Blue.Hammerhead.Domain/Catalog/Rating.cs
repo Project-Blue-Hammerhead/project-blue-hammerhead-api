@@ -1,29 +1,32 @@
-namespace Blue.Hammerhead.Domain.Catalog;
-
-public class Rating
+namespace Blue.Hammerhead.Domain.Catalog
 {
-    public int Stars { get; set; }
-
-    public string UserName { get; set; }
-
-    public string Review { get; set; }
-
-    public Rating(int stars, string userName, string review)
+    public class Rating
     {
-        if (stars < 1 || stars > 5)
-        {
-            throw new ArgumentException(
-                "Star rating must be an integer of 1, 2, 3, 4, or 5."
-            );
-        }
+        public int Id { get; set; }
 
-        if (string.IsNullOrEmpty(userName))
-        {
-            throw new ArgumentException("UserName cannot be null.");
-        }
+        public int Stars { get; set; }
 
-        Stars = stars;
-        UserName = userName;
-        Review = review;
+        public string UserName { get; set; }
+
+        public string Review { get; set; }
+
+        public Rating(int stars, string userName, string review)
+        {
+            if (stars < 1 || stars > 5)
+            {
+                throw new ArgumentException(
+                    "Star rating must be an integer of 1, 2, 3, 4, or 5."
+                );
+            }
+
+            if (string.IsNullOrEmpty(userName))
+            {
+                throw new ArgumentException("UserName cannot be null.");
+            }
+
+            Stars = stars;
+            UserName = userName;
+            Review = review;
+        }
     }
 }

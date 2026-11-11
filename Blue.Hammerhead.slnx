@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/tests/">
+    <Project Path="tests/Blue.Hammerhead.Domain.Tests/Blue.Hammerhead.Domain.Tests.csproj" />
+  </Folder>
   <Project Path="Blue.Hammerhead.Api/Blue.Hammerhead.Api.csproj" />
   <Project Path="Blue.Hammerhead.Data/Blue.Hammerhead.Data.csproj" />
   <Project Path="Blue.Hammerhead.Domain/Blue.Hammerhead.Domain.csproj" />

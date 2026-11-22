@@ -17,6 +17,16 @@ namespace Blue.Hammerhead.Api
                     b => b.MigrationsAssembly("Blue.Hammerhead.Api")
                 ));
 
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(builder =>
+                {
+                    builder.WithOrigins("http://localhost:3000")
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                });
+            });
+
             services.AddControllers();
 
             services.AddEndpointsApiExplorer();
@@ -45,6 +55,8 @@ namespace Blue.Hammerhead.Api
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors();
 
             app.UseAuthorization();
 
